@@ -36,6 +36,7 @@ document.getElementById('submit-button').addEventListener('click', () => {
                     <p>${userDescription}</p>
                     <img src="${e.target.result}" alt="User Image" style="width: 150px; height: auto; float: right; margin-left: 10px;">
                     <button class="chat-button">Chat</button>
+                    <button class="remove-button">Remove</button>
                 `;
                 appendInputDisplay(displayDiv, fullName);
             };
@@ -46,6 +47,7 @@ document.getElementById('submit-button').addEventListener('click', () => {
                 <h4>${userHeading}</h4>
                 <p>${userDescription}</p>
                 <button class="chat-button">Chat</button>
+                <button class="remove-button">Remove</button>
             `;
             appendInputDisplay(displayDiv, fullName);
         }
@@ -60,7 +62,19 @@ document.getElementById('submit-button').addEventListener('click', () => {
 function appendInputDisplay(displayDiv, fullName) {
     document.getElementById('user-input-container').appendChild(displayDiv);
     document.getElementById('user-input-container').classList.remove('hidden');
+
     displayDiv.querySelector('.chat-button').addEventListener('click', () => openChatModal(fullName));
+    
+    displayDiv.querySelector('.remove-button').addEventListener('click', () => {
+        removeUserInput(displayDiv);
+        // Add your database removal code here, e.g., an AJAX request
+    });
+}
+
+function removeUserInput(displayDiv) {
+    displayDiv.remove();
+    // Implement your AJAX call here to remove from the database.
+    // Example: Remove from database using an ID associated with this block
 }
 
 document.querySelectorAll('.category-button').forEach(button => {

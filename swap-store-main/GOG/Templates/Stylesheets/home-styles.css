@@ -13,12 +13,11 @@ body {
 
 header {
     margin: -25px;
-    background-image: url('/swap-store-main/GOG/Templates/Images/Untitled\ \(11\).png');
+    background-image: url('/swap-store-main/GOG/Templates/Images/Untitled%20(11).png');
     background-size: cover;
     background-repeat: no-repeat;
     padding: 10px 20px;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
-    /* border-radius: 110px 11px 0 0; */
 }
 
 .main-nav {
@@ -254,9 +253,10 @@ main {
 }
 
 .chat-button {
+    margin-right: 50px;
     position: absolute;
     bottom: 10px;
-    right: 10px;
+    right: 70px;
     padding: 10px 20px;
     background: #2e7d32;
     color: #fff;
@@ -269,6 +269,26 @@ main {
 
 .chat-button:hover {
     background: #66bb6a;
+    transform: translateY(-2px);
+}
+
+.remove-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    background: #e57373;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    margin-left: 5px;
+}
+
+.remove-button:hover {
+    background: #f44336;
     transform: translateY(-2px);
 }
 
