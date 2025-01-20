@@ -90,6 +90,21 @@ a:hover {
     color: var(--light-gray);
 }
 
+.MainHead{
+
+  text-decoration: underline 5px solid;
+ 
+}
+
+#logoNext{
+  width: 1000px;
+  height: 100px;
+  /* background-color: var(--bright-green); */
+  border-radius: 50%;
+  margin-right: 20px;
+  /* position: fixed; */
+}
+
 
   .hero {
     background: linear-gradient(-45deg, #15c694, #c0fcae, #57e5d7, #c0fcae, #15c694);
@@ -341,7 +356,7 @@ a:hover {
     flex-direction: column;
     background: var(--light-green);
     margin-left: 20px;
-    background-image: url('/swap-store-main/GOG/Templates/Images/DescBG.png');
+    background-image: url('/Exchange-store/swap-store-main/GOG/Templates/Images/DescBG.png');
     background-size: cover;
     font-family: 'Poppins', sans-serif;
     

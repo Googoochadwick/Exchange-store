@@ -13,7 +13,7 @@ body {
 
 header {
     margin: -25px;
-    background-image: url('/swap-store-main/GOG/Templates/Images/Untitled%20(11).png');
+    background-image: url('/Exchange-store/swap-store-main/GOG/Templates/Images/Untitled\ \(11\).png');
     background-size: cover;
     background-repeat: no-repeat;
     padding: 10px 20px;
@@ -151,36 +151,73 @@ svg {
     transform: translateY(-2px);
 }
 
-.category-nav, .add-button-container {
+.category-nav{
     display: flex;
     justify-content: center;
     gap: 10px;
     margin-top: 10px;
 }
 
+
 .add-options {
     display: flex;
+    position: relative;
+    bottom: 20px;
+    right: 100px;
     gap: 10px;
     flex-direction: column;
     align-items: center;
+    /* border:#66bb6a solid 2px;
+    border-radius: 50px; */
 }
 
-.category-button {
-    padding: 10px 20px;
-    background: #e8f5e9;
-    border: none;
-    color: #2e7d32;
+
+.add-button-container{
+    position: fixed;
+    bottom: 90px;
+    right: 40px;
+    width: 60px;
+    height: 60px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    border-radius: 5px;
+    background-color: #388e3c;
+    color: white;
+    z-index: 1002;
+  }
+  
+  .add-button-container:hover {
+    background-color: rgb(251, 37, 118);
+  }
+  
+
+.category-button {
+    padding: 10px 20px;   
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 50px;
     transition: background 0.3s ease, transform 0.3s ease;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
 
-.category-button.active,
+.category-button.active{
+    background-color: #388e3c;
+}
 .category-button:hover {
-    background: #43a047;
-    color: #ffffff;
+    background: transparent;
+    color: #000000;
     transform: translateY(-2px);
+}
+
+#add-button{
+    position: fixed;
+    bottom: 100px;
+    right: 45px;
+
 }
 
 .hidden {
@@ -233,7 +270,26 @@ main {
     transform: translateY(-2px);
 }
 
-.user-input-display, .listing-box {
+.user-input-display {
+    position: relative;
+    background: #f6fef6;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 50px 0 3px 0;
+    color: #2e7d32;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: auto;
+    animation: fadeIn 0.5s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition for the hover effect */
+}
+
+.user-input-display:hover {
+    transform: translateY(-5px); /* Moves the block slightly upwards */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Increases the shadow for a 'lifting' effect */
+}
+
+
+.listing-box {
     position: relative;
     background: #f6fef6;
     border-radius: 10px;

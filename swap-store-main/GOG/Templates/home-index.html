@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Swap Store - Home</title>
-    <link rel="stylesheet" href="/swap-store-main/GOG/Templates/Stylesheets/home-styles.css">
+    <link rel="stylesheet" href="/Exchange-store/swap-store-main/GOG/Templates/Stylesheets/home-styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
@@ -30,24 +30,19 @@
                 <button type="submit" id="search-button"><i class="fas fa-search"></i></button>
             </div>
             <div class="nav-buttons">
-                <a href="user-index.php" class="nav-button"><img src="Images/ProfileImg.png" id="ProfileImg"></a>
-                <a href="aboutus-index.html" class="nav-button"><img src="Images/Green-Button.png" id="ProfileImg"></a>
+                <a href="/Exchange-store/swap-store-main/GOG/Templates/personal-index.html" class="nav-button" class="nav-button"><img src="/Exchange-store/swap-store-main/GOG/Templates/Images/ProfileImg.png" id="ProfileImg"></a>
+                <a href="/Exchange-store/swap-store-main/GOG/Templates/aboutus-index.html" class="nav-button"><img src="Images/Green-Button.png" id="ProfileImg"></a>
             </div>
         </nav>
         <nav class="category-nav">
             <button class="category-button active" data-category="all">All</button>
             <button class="category-button" data-category="item">Items</button>
             <button class="category-button" data-category="skill">Skills</button>
-            <a href="/Community-Chat/index.html"><button class="category-button" id="community-button">Community</button></a>
+            <a href="/Exchange-store/swap-store-main/Community-Chat/index.html"><button class="category-button" id="community-button">Community</button></a>
         </nav>
-        <div class="add-button-container">
-            <button class="category-button" id="add-button">Add</button>
-            <div id="add-options" class="add-options hidden">
-                <button class="category-button" id="add-skill">Add Skill</button>
-                <button class="category-button" id="add-item">Add Item</button>
-            </div>
-        </div>
+        
     </header>
+
 
     <main>
         <div id="input-section" class="hidden">
@@ -72,7 +67,13 @@
             <button id="send-message">Send</button>
         </div>
     </div>
-
-    <script src="/swap-store-main/GOG/Templates/Scripts/home-script.js"></script>
+    <div class="add-button-container">
+        <button class="category-button" id="add-button">+</button>
+        <div id="add-options" class="add-options hidden">
+            <button class="category-button" id="add-skill">Add Skill</button>
+            <button class="category-button" id="add-item">Add Item</button>
+        </div>
+    </div>
+    <script src="/Exchange-store/swap-store-main/GOG/Templates/Scripts/home-script.js"></script>
 </body>
 </html>
