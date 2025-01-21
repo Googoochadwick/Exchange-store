@@ -8,7 +8,7 @@ document.getElementById('add-skill').addEventListener('click', () => setInputSec
 document.getElementById('add-item').addEventListener('click', () => setInputSection('item'));
 
 document.getElementById('community-button').addEventListener('click', () => {
-    window.location.href = '/GOG/Community/community-page.html'; // Change to your community page URL
+    window.location.href = '/GOG/Community/community-page.html';
 });
 
 function setInputSection(type) {
@@ -25,7 +25,7 @@ document.getElementById('submit-button').addEventListener('click', () => {
     if (userHeading && userDescription) {
         const displayDiv = document.createElement('div');
         displayDiv.className = `user-input-display ${currentInputType}`;
-        displayDiv.dataset.heading = userHeading.toLowerCase(); // For case-insensitive search
+        displayDiv.dataset.heading = userHeading.toLowerCase();
 
         if (userImage) {
             const reader = new FileReader();
@@ -67,18 +67,18 @@ function appendInputDisplay(displayDiv, fullName) {
     
     displayDiv.querySelector('.remove-button').addEventListener('click', () => {
         removeUserInput(displayDiv);
-        // Add your database removal code here, e.g., an AJAX request
     });
 }
 
 function removeUserInput(displayDiv) {
     displayDiv.remove();
-    // Implement your AJAX call here to remove from the database.
-    // Example: Remove from database using an ID associated with this block
 }
 
 document.querySelectorAll('.category-button').forEach(button => {
     button.addEventListener('click', () => {
+        // Hide the input section
+        document.getElementById('input-section').classList.add('hidden');
+
         const category = button.dataset.category;
 
         document.querySelectorAll('.category-button').forEach(btn => btn.classList.remove('active'));

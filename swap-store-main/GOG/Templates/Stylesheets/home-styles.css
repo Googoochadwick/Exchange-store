@@ -151,7 +151,7 @@ svg {
     transform: translateY(-2px);
 }
 
-.category-nav{
+.category-nav {
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -167,12 +167,9 @@ svg {
     gap: 10px;
     flex-direction: column;
     align-items: center;
-    /* border:#66bb6a solid 2px;
-    border-radius: 50px; */
 }
 
-
-.add-button-container{
+.add-button-container {
     position: fixed;
     bottom: 90px;
     right: 40px;
@@ -187,12 +184,22 @@ svg {
     background-color: #388e3c;
     color: white;
     z-index: 1002;
-  }
-  
-  .add-button-container:hover {
+}
+
+.add-button-container:hover {
     background-color: rgb(251, 37, 118);
-  }
-  
+}
+
+.add-button-category, .skill-button-category, .add-item-category {
+    padding: 10px 20px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
 
 .category-button {
     padding: 10px 20px;   
@@ -213,11 +220,19 @@ svg {
     transform: translateY(-2px);
 }
 
-#add-button{
+
+.add-button-category:hover,
+.skill-button-category:hover,
+.add-item-category:hover {
+    background: transparent;
+    color: #000000;
+    transform: translateY(-2px);
+}
+
+#add-button {
     position: fixed;
     bottom: 100px;
     right: 45px;
-
 }
 
 .hidden {
@@ -280,14 +295,13 @@ main {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     overflow: auto;
     animation: fadeIn 0.5s ease;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition for the hover effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .user-input-display:hover {
-    transform: translateY(-5px); /* Moves the block slightly upwards */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Increases the shadow for a 'lifting' effect */
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
-
 
 .listing-box {
     position: relative;
